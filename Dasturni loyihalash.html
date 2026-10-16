@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>8-sinf — Dasturlar va o‘yinlar</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #1565c0, #7b1fa2);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 5px 0;
+    font-size: 30px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 22px;
+    margin: 20px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    color: #6a1b9a;
+    margin-top: 0;
+}
+
+.intro {
+    border-left: 6px solid #1565c0;
+}
+
+.topic {
+    border-left: 6px solid #2e7d32;
+}
+
+.important {
+    background: #e3f2fd;
+    border-left: 5px solid #1976d2;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.task {
+    background: #ede7f6;
+    border-left: 5px solid #7b1fa2;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.example {
+    background: #263238;
+    color: white;
+    padding: 18px;
+    border-radius: 10px;
+    font-family: Consolas, monospace;
+    overflow-x: auto;
+}
+
+.steps {
+    padding-left: 20px;
+}
+
+.steps li {
+    margin: 9px 0;
+}
+
+.question {
+    background: #fce4ec;
+    border-left: 5px solid #c2185b;
+    padding: 13px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.badge {
+    display: inline-block;
+    background: #1565c0;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 3px;
+    font-size: 14px;
+}
+
+footer {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💻 8-sinf Informatika va axborot texnologiyalari</h1>
+    <p>Scratch dasturlash muhiti</p>
+    <p><strong>Dasturlar va o‘yinlar yaratish</strong></p>
+</header>
+
+<div class="container">
+
+<!-- KIRISH -->
+<div class="card intro">
+    <h2>📚 Darslarimiz</h2>
+
+    <p>
+        Ushbu sahifada Scratch dasturida dastur va o‘yinlar
+        yaratishga oid mavzular o‘rganiladi.
+    </p>
+
+    <span class="badge">Scratch</span>
+    <span class="badge">Dastur</span>
+    <span class="badge">O‘yin</span>
+    <span class="badge">Algoritm</span>
+</div>
+
+
+<!-- 7.1-MAVZU -->
+<div class="card topic">
+
+    <h2>1️⃣ Dasturni loyihalash</h2>
+
+    <p>
+        <strong>Dasturni loyihalash</strong> — dastur qanday ishlashini
+        oldindan rejalashtirish jarayonidir.
+    </p>
+
+    <div class="important">
+        💡 Dastur yaratishdan oldin uning maqsadi,
+        bajariladigan vazifalari va ishlash tartibini aniqlab olish kerak.
+    </div>
+
+    <h3>📝 Asosiy bosqichlar</h3>
+
+    <ol class="steps">
+        <li>Dastur maqsadini aniqlash.</li>
+        <li>Muammoni tushunish.</li>
+        <li>Algoritm tuzish.</li>
+        <li>Kerakli spraytlarni tanlash.</li>
+        <li>Bloklar yordamida dastur tuzish.</li>
+        <li>Dastur ishlashini tekshirish.</li>
+        <li>Xatolarni tuzatish.</li>
+    </ol>
+
+    <div class="task">
+        <strong>🎯 Amaliy topshiriq:</strong>
+        <p>
+            Scratch dasturida kichik o‘yin yaratishdan oldin
+            o‘yinning maqsadi, qoidalari va g‘oliblik shartlarini
+            yozib chiqing.
+        </p>
+    </div>
+
+</div>
+
+
+<!--7. 2-MAVZU -->
+<div class="card topic">
+
+    <h2>2️⃣ Tugma o‘yini</h2>
+
+    <p>
+        <strong>Tugma o‘yini</strong> — foydalanuvchi ekrandagi
+        obyektni bosib, ochko to‘playdigan oddiy o‘yin.
+    </p>
+
+    <div class="important">
+        🎮 Masalan, ekranda tugma paydo bo‘ladi.
+        O‘quvchi tugmani bosganida uning ochkosi oshadi.
+    </div>
+
+    <h3>🔢 O‘yinning ishlash tartibi</h3>
+
+    <ol class="steps">
+        <li>O‘yin boshlanadi.</li>
+        <li>Ochko qiymati 0 ga tenglanadi.</li>
+        <li>Tugma yoki sprayt ekranda ko‘rsatiladi.</li>
+        <li>Foydalanuvchi spraytni bosadi.</li>
+        <li>Ochko 1 taga oshadi.</li>
+        <li>Sprayt boshqa joyga ko‘chishi mumkin.</li>
+    </ol>
+
+    <h3>💻 Scratch algoritmi</h3>
+
+    <div class="example">
+when green flag clicked<br>
+set [ochko] to 0<br><br>
+
+when this sprite clicked<br>
+change [ochko] by 1<br>
+go to random position
+    </div>
+
+    <div class="task">
+        <strong>🎯 Amaliy topshiriq:</strong>
+        <p>
+            30 soniya ichida imkon qadar ko‘p marta
+            tugmani bosib, yuqori natija olish o‘yinini yarating.
+        </p>
+    </div>
+
+</div>
+
+
+<!-- 7.3-MAVZU -->
+<div class="card topic">
+
+    <h2>3️⃣ Natijani taxmin qilish</h2>
+
+    <p>
+        Ushbu o‘yinda kompyuter yoki dastur tomonidan
+        tanlangan natijani foydalanuvchi oldindan taxmin qiladi.
+    </p>
+
+    <div class="important">
+        💡 Masalan, dastur 1 dan 10 gacha tasodifiy son tanlaydi.
+        O‘quvchi esa bu sonni taxmin qiladi.
+    </div>
+
+    <h3>🧩 O‘yin algoritmi</h3>
+
+    <ol class="steps">
+        <li>Dastur ishga tushadi.</li>
+        <li>Kompyuter tasodifiy son tanlaydi.</li>
+        <li>Foydalanuvchidan taxmin so‘raladi.</li>
+        <li>Taxmin haqiqiy natija bilan taqqoslanadi.</li>
+        <li>Natija to‘g‘ri yoki noto‘g‘ri ekanligi ko‘rsatiladi.</li>
+    </ol>
+
+    <h3>💻 Scratch namunasi</h3>
+
+    <div class="example">
+when green flag clicked<br>
+set [sirli son] to (pick random 1 to 10)<br>
+ask [1 dan 10 gacha sonni taxmin qiling:] and wait<br><br>
+
+if &lt;(answer) = (sirli son)&gt; then<br>
+&nbsp;&nbsp;say [To‘g‘ri topdingiz!] for 2 seconds<br>
+else<br>
+&nbsp;&nbsp;say [Noto‘g‘ri. Yana urinib ko‘ring!] for 2 seconds<br>
+end
+    </div>
+
+    <div class="task">
+        <strong>🎯 Amaliy topshiriq:</strong>
+        <p>
+            Dasturni shunday o‘zgartiringki, foydalanuvchi
+            3 marta taxmin qilish imkoniyatiga ega bo‘lsin.
+        </p>
+    </div>
+
+</div>
+
+
+<!-- 7.4-MAVZU -->
+<div class="card topic">
+
+    <h2>4️⃣ 🦜 To‘ti ovi</h2>
+
+    <p>
+        <strong>To‘ti ovi</strong> — foydalanuvchi harakatlanayotgan
+        to‘tini topib, bosish orqali ochko yig‘adigan o‘yin.
+    </p>
+
+    <div class="important">
+        🦜 To‘ti ma'lum vaqt oralig‘ida tasodifiy joyga ko‘chadi.
+        O‘quvchi uni imkon qadar tez bosishi kerak.
+    </div>
+
+    <h3>🎮 O‘yinning ishlash tartibi</h3>
+
+    <ol class="steps">
+        <li>O‘yin boshlanadi.</li>
+        <li>Ochko 0 ga tenglanadi.</li>
+        <li>To‘ti ekranda paydo bo‘ladi.</li>
+        <li>To‘ti tasodifiy joyga ko‘chadi.</li>
+        <li>O‘quvchi to‘tini bosadi.</li>
+        <li>Ochko 1 taga oshadi.</li>
+        <li>O‘yin vaqt tugaguncha davom etadi.</li>
+    </ol>
+
+    <h3>💻 Scratch algoritmi</h3>
+
+    <div class="example">
+when green flag clicked<br>
+set [ochko] to 0<br>
+forever<br>
+&nbsp;&nbsp;go to random position<br>
+&nbsp;&nbsp;wait 1 seconds<br>
+end<br><br>
+
+when this sprite clicked<br>
+change [ochko] by 1
+    </div>
+
+    <div class="task">
+        <strong>🎯 Amaliy topshiriq:</strong>
+
+        <p>
+            To‘ti 1 soniyada bir marta boshqa joyga ko‘chadigan
+            va o‘quvchi uni bosganida ochko oshadigan o‘yin yarating.
+        </p>
+
+        <p>
+            ⭐ Qo‘shimcha topshiriq:
+            o‘yinga vaqt chegarasini qo‘shing.
+        </p>
+    </div>
+
+</div>
+
+
+<!-- XULOSA -->
+<div class="card intro">
+
+    <h2>📌 Xulosa</h2>
+
+    <p>
+        Bugungi mavzularda Scratch yordamida dastur va o‘yinlarni
+        oldindan loyihalash, spraytlarni boshqarish,
+        foydalanuvchi bilan muloqot qilish va ochko hisoblash
+        usullarini o‘rgandik.
+    </p>
+
+    <div class="important">
+        ⭐ <strong>Esda tuting:</strong><br><br>
+        Yaxshi dastur avval rejalashtiriladi,
+        keyin algoritm tuziladi va undan so‘ng Scratch
+        bloklari yordamida amalga oshiriladi.
+    </div>
+
+</div>
+
+
+<!-- NAZORAT -->
+<div class="card">
+
+    <h2>❓ Nazorat savollari</h2>
+
+    <div class="question">
+        <strong>1.</strong> Dasturni loyihalash nima?
+    </div>
+
+    <div class="question">
+        <strong>2.</strong> Tugma o‘yinida ochko qanday oshiriladi?
+    </div>
+
+    <div class="question">
+        <strong>3.</strong> Tasodifiy son olish uchun qaysi Scratch blokidan foydalaniladi?
+    </div>
+
+    <div class="question">
+        <strong>4.</strong> To‘ti o‘yinida spraytni tasodifiy joyga qanday ko‘chirish mumkin?
+    </div>
+
+    <div class="question">
+        <strong>5.</strong> O‘yinga vaqt chegarasi qo‘shish nima uchun kerak?
+    </div>
+
+</div>
+
+</div>
+<p> <a href="Tugma oyini.html">
+    <span class="badge">MAVZU:Tugma oyini</span>
+</a></p>
+
+<footer>
+    <p>© 2026 — Informatika va axborot texnologiyalari</p>
+    <p>8-sinf | Scratch darslari | Ikrom ustoz</p>
+</footer>
+
+</body>
+</html>

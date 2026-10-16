@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>8-sinf — Sprayt kostyumlari va vaqt bilan ishlash</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+        color: #222;
+        line-height: 1.6;
+    }
+
+    header {
+        background: linear-gradient(135deg, #1565c0, #6a1b9a);
+        color: white;
+        text-align: center;
+        padding: 30px 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+        margin: 5px 0;
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .lesson-info {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        border-left: 6px solid #1565c0;
+    }
+
+    .lesson-info h2 {
+        color: #1565c0;
+        margin-top: 0;
+    }
+
+    .card {
+        background: white;
+        border-radius: 15px;
+        padding: 22px;
+        margin: 20px 0;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    }
+
+    .card h2 {
+        color: #6a1b9a;
+        margin-top: 0;
+    }
+
+    .old-lesson {
+        background: #fff8e1;
+        border-left: 6px solid #ff9800;
+    }
+
+    .today {
+        background: #e8f5e9;
+        border-left: 6px solid #2e7d32;
+    }
+
+    .important {
+        background: #e3f2fd;
+        border-left: 6px solid #1976d2;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .example {
+        background: #263238;
+        color: #ffffff;
+        padding: 18px;
+        border-radius: 10px;
+        font-family: Consolas, monospace;
+        overflow-x: auto;
+    }
+
+    .steps {
+        counter-reset: step;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .steps li {
+        counter-increment: step;
+        background: #f5f5f5;
+        margin: 10px 0;
+        padding: 12px 15px 12px 50px;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .steps li::before {
+        content: counter(step);
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        width: 25px;
+        height: 25px;
+        background: #1565c0;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 25px;
+        font-weight: bold;
+    }
+
+    .question {
+        background: #fce4ec;
+        border-left: 5px solid #c2185b;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+
+    .task {
+        background: #ede7f6;
+        border-left: 6px solid #7b1fa2;
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        margin: 8px 5px 0 0;
+        background: #1565c0;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #0d47a1;
+        transform: translateY(-2px);
+    }
+
+    footer {
+        margin-top: 30px;
+        background: #263238;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .badge {
+        display: inline-block;
+        background: #1565c0;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        margin: 3px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💻 8-sinf Informatika va axborot texnologiyalari.I-chorak.7-mavzu.</h1>
+    <p><strong>Bugungi mavzu:</strong> Sprayt kostyumlari va vaqt bilan ishlash</p>
+    <p>Scratch dasturlash muhiti</p>
+      <p>(29-40 sahifalar)</p>
+</header>
+
+<div class="container">
+
+    <!-- DARS MA'LUMOTI -->
+    <div class="lesson-info">
+        <h2>📚 Dars mavzusi</h2>
+
+        <p>
+            <span class="badge">8-sinf</span>
+            <span class="badge">Scratch</span>
+            <span class="badge">Sprayt</span>
+            <span class="badge">Vaqt</span>
+        </p>
+
+        <p>
+            Bugungi darsda Scratch dasturida spraytlarning
+            <strong>kostyumlarini almashtirish</strong> va
+            <strong>vaqt bilan ishlash</strong> usullari o‘rganiladi.
+        </p>
+    </div>
+
+
+    <!-- OLDINGI DARS -->
+    <div class="card old-lesson">
+        <h2>🔙 Oldingi dars</h2>
+
+        <h3>Ma’lumotlar validatsiyasi.</h3>
+
+        <p>
+            <strong>Yosh va bo‘yni so‘rab oluvchi dastur</strong>
+        </p>
+
+        <p>
+            Oldingi darsda foydalanuvchidan ma'lumotlarni qabul qilish
+            va kiritilgan ma'lumotlarni tekshirish, ya'ni
+            <strong>validatsiya</strong> qilish o‘rganildi.
+        </p>
+
+        <div class="important">
+            💡 <strong>Validatsiya</strong> — kiritilgan ma'lumotlarning
+            talabga mos yoki mos emasligini tekshirish.
+        </div>
+    </div>
+
+
+    <!-- BUGUNGI MAVZU -->
+    <div class="card today">
+        <h2>🎯 Bugungi dars</h2>
+
+        <h3>Sprayt kostyumlari va vaqt bilan ishlash</h3>
+
+        <p>
+            Scratch dasturida har bir sprayt bir nechta
+            <strong>kostyum</strong>ga ega bo‘lishi mumkin.
+        </p>
+
+        <p>
+            Kostyumlarni navbat bilan almashtirish orqali
+            spraytning harakatlanayotgandek ko‘rinishini hosil qilish mumkin.
+        </p>
+    </div>
+
+
+    <!-- SPRAYT -->
+    <div class="card">
+        <h2>🐱 1. Sprayt nima?</h2>
+
+        <p>
+            <strong>Sprayt</strong> — Scratch dasturidagi harakatlanuvchi
+            yoki boshqariluvchi obyekt.
+        </p>
+
+        <div class="important">
+            Masalan: mushuk, odam, qush, mashina yoki boshqa obyekt
+            sprayt bo‘lishi mumkin.
+        </div>
+    </div>
+
+
+    <!-- KOSTYUM -->
+    <div class="card">
+        <h2>👕 2. Sprayt kostyumi nima?</h2>
+
+        <p>
+            <strong>Kostyum</strong> — spraytning tashqi ko‘rinishlaridan biri.
+        </p>
+
+        <p>
+            Agar spraytda bir nechta kostyum bo‘lsa,
+            ularni almashtirish orqali animatsiya yaratish mumkin.
+        </p>
+
+        <h3>Misol:</h3>
+
+        <ul>
+            <li>1-kostyum — oyoq chap tomonda</li>
+            <li>2-kostyum — oyoq o‘ng tomonda</li>
+            <li>3-kostyum — yana boshqa holat</li>
+        </ul>
+
+        <div class="important">
+            🔄 Kostyumlarni tez-tez almashtirish natijasida
+            sprayt harakatlanayotgandek ko‘rinadi.
+        </div>
+    </div>
+
+
+    <!-- VAQT -->
+    <div class="card">
+        <h2>⏱️ 3. Vaqt bilan ishlash</h2>
+
+        <p>
+            Scratch dasturida vaqtni boshqarish uchun
+            <strong>Wait (kutish)</strong> blokidan foydalanish mumkin.
+        </p>
+
+        <div class="example">
+when green flag clicked<br>
+forever<br>
+&nbsp;&nbsp;next costume<br>
+&nbsp;&nbsp;wait 0.5 seconds
+        </div>
+
+        <p>
+            Bu dastur spraytning kostyumini almashtiradi va
+            har bir kostyum orasida <strong>0,5 soniya</strong> kutadi.
+        </p>
+    </div>
+
+
+    <!-- BOSQICHLAR -->
+    <div class="card">
+        <h2>📝 4. Amaliy ish bosqichlari</h2>
+
+        <ol class="steps">
+            <li>Scratch dasturini ishga tushiring.</li>
+            <li>Biror sprayt tanlang.</li>
+            <li>Spraytning <strong>Costumes</strong> bo‘limini oching.</li>
+            <li>Spraytga kamida ikkita kostyum mavjudligini tekshiring.</li>
+            <li><strong>Events</strong> bo‘limidan yashil bayroq blokini tanlang.</li>
+            <li><strong>Control</strong> bo‘limidan <strong>forever</strong> blokini qo‘shing.</li>
+            <li><strong>Looks</strong> bo‘limidan <strong>next costume</strong> blokini qo‘shing.</li>
+            <li><strong>Control</strong> bo‘limidan <strong>wait 0.5 seconds</strong> blokini qo‘shing.</li>
+            <li>Yashil bayroqni bosing va natijani kuzating.</li>
+        </ol>
+    </div>
+
+
+    <!-- MISOL -->
+    <div class="card">
+        <h2>💡 5. Dastur namunasi</h2>
+
+        <div class="example">
+when green flag clicked<br>
+forever<br>
+&nbsp;&nbsp;next costume<br>
+&nbsp;&nbsp;wait 0.5 seconds
+        </div>
+
+        <p>
+            <strong>Natija:</strong> sprayt kostyumlarini ketma-ket
+            almashtirib, harakatlanayotgandek ko‘rinadi.
+        </p>
+    </div>
+
+
+    <!-- AMALIY TOPSHIRIQ -->
+    <div class="card">
+        <h2>🛠️ 6. Amaliy topshiriq</h2>
+
+        <div class="task">
+            <h3>🎮 "Harakatlanuvchi sprayt"</h3>
+
+            <p>
+                Scratch dasturida biror sprayt tanlang.
+                Uning kostyumlarini almashtirib turuvchi dastur yarating.
+            </p>
+
+            <p><strong>Shartlar:</strong></p>
+
+            <ul>
+                <li>Yashil bayroq bosilganda dastur ishga tushsin.</li>
+                <li>Kostyum avtomatik almashsin.</li>
+                <li>Har bir kostyumdan keyin 0,5 soniya kutilsin.</li>
+                <li>Dastur doimiy takrorlansin.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- SAVOLLAR -->
+    <div class="card">
+        <h2>❓ 7. Nazorat savollari</h2>
+
+        <div class="question">
+            <strong>1.</strong> Sprayt nima?
+        </div>
+
+        <div class="question">
+            <strong>2.</strong> Kostyum nima uchun ishlatiladi?
+        </div>
+
+        <div class="question">
+            <strong>3.</strong> Sprayt kostyumini qanday almashtirish mumkin?
+        </div>
+
+        <div class="question">
+            <strong>4.</strong> Wait bloki qanday vazifani bajaradi?
+        </div>
+
+        <div class="question">
+            <strong>5.</strong> Kostyumlarni almashtirish orqali qanday effekt hosil qilish mumkin?
+        </div>
+    </div>
+
+
+    <!-- XULOSA -->
+    <div class="card">
+        <h2>📌 8. Xulosa</h2>
+
+        <p>
+            Bugungi darsda biz Scratch dasturida
+            <strong>sprayt</strong>, <strong>kostyum</strong> va
+            <strong>vaqt</strong> bilan ishlashni o‘rgandik.
+        </p>
+
+        <div class="important">
+            ⭐ Esda tuting:
+            <br><br>
+            <strong>Sprayt + turli kostyumlar + vaqt oralig‘i
+            = oddiy animatsiya.</strong>
+        </div>
+    </div>
+
+</div>
+<p> <a href="Dasturni loyihalash.html">
+    <span class="badge">MAVZU:Dasturni loyihalash</span>
+</a></p>
+
+<footer>
+    <p>© 2026 — Informatika va axborot texnologiyalari</p>
+    <p>8-sinf darslari | Ikrom ustoz</p>
+</footer>
+
+</body>
+</html>
